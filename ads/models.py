@@ -15,3 +15,9 @@ class Advert(models.Model):
     description = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     phone = PhoneNumberField(null=False, blank=False, unique=True)
+
+    class Meta:
+        ordering = ["-created_on"]
+
+    def __str__(self):
+        return f"{self.title} | added by {self.user} on {self.created_on}"
