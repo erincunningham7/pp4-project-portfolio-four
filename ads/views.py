@@ -5,5 +5,6 @@ from .models import Advert
 
 class AdList(generic.ListView):
     queryset = Advert.objects.all()
-    template_name = "advert_list.html"
+    template_name = "ads/index.html"
+    paginate_by = 6
 
