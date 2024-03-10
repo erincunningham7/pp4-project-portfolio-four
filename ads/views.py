@@ -4,5 +4,6 @@ from django.views import generic
 from .models import Advert
 
 class AdList(generic.ListView):
-    model = Advert
+    queryset = Advert.objects.all()
+    template_name = "advert_list.html"
 
