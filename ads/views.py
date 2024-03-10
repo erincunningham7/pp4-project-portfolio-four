@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views import generic
+from .models import Advert
 
-def index(request):
-    return HttpResponse("Hello, world. You're at the ads index.")
+class AdList(generic.ListView):
+    model = Advert
+
