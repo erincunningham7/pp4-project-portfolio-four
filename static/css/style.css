@@ -1,0 +1,56 @@
+body {
+    background-color: #E6CCB2;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.dark-bg {
+    background-color: #B08968;
+}
+
+.brand {
+    font-size: 1.4rem;
+    color: #EDE0D4;
+}
+
+.brand:hover {
+    color: #DDB892;
+}
+
+.navbar-text, .nav-link {
+    color: #EDE0D4;
+}
+
+.nav-link:hover {
+    color: #DDB892;
+}
+
+.card {
+    border: none;
+    background-color: #EDE0D4;
+}
+
+.ad-link {
+    text-decoration: none;
+    color: #445261;
+}
+
+.ad-link:hover,
+.page-link {
+    color: #9C6644;
+}
+
+.page-link:hover {
+    background-color: #7F5539;
+    color: #DDB892;
+}
+
+.btn-primary {
+    border: none;
+}
+
+.btn-primary:hover {
+    color: #DDB892;
+}
