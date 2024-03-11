@@ -69,3 +69,17 @@ body {
     height: 300px;
     margin: 5% 5%; 
 }
+
+.login-text {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.btn-login {
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.btn-login:hover {
+    color:#7F5539;
+}
