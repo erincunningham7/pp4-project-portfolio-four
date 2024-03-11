@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from django.views import generic
+from django.contrib import messages
 from .models import Advert
 from .forms import AdvertForm
 
@@ -42,6 +43,10 @@ def create_ad(request):
         ad.user = request.user
         ad.advert = advert
         ad.save()
+        messages.add_message(
+        request, messages.SUCCESS,
+        'Your advert is now live!'
+    )
 
     return render(
         request,
