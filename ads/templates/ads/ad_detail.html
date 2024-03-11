@@ -1,0 +1,34 @@
+{% extends 'base.html' %} {% block content %}
+{% load static %}
+
+<div class="ad-container">
+    <div class="ad-img">
+    <img src="{% static 'images/dog-one.jpg' %}" class="col-md-6 float-md-end mb-3 ms-md-3" alt="...">
+    </div>
+    <div class="ad-content">
+    <h1 class="post-title">{{ advert.title }}</h1>
+
+    <p class="post-subtitle">{{ advert.user }} | {{ advert.created_on }}</p>
+    
+    <p class="card-text">Pet Name:
+        {{ advert.pet_name | safe }}
+    </p>
+    <p class="card-text">Pet Breed:
+        {{ advert.pet_breed | safe }}
+    </p>
+    <p class="card-text">Age:
+        {{ advert.pet_age | safe }}
+    </p>
+    <p class="card-text">Vaccinated:
+        {{ advert.vaccinated | safe }}
+    </p>
+    <p class="card-text">Details:
+        {{ advert.description | safe }}
+    </p>
+    <p class="card-text">Contact Number:
+        {{ advert.phone | safe }}
+    </p>
+</div>
+</div>
+
+{% endblock content %}

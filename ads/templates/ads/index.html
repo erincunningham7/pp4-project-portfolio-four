@@ -13,7 +13,7 @@
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
-                            <a href="#" class="ad-link">
+                            <a href="{% url 'ad_detail' ad.id %}" class="ad-link">
                                 <h2 class="card-title">{{ ad.title }}</h2>
                             </a>
                             <p class="card-text text-muted h6">{{ ad.created_on}}
