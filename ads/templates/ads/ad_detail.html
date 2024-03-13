@@ -29,8 +29,8 @@
         {{ advert.phone | safe }}
     </p>
     {% if user.is_authenticated and advert.user == user %}
-  <button class="btn btn-edit"
-    ad_id="{{ ad.id }}">Edit</button>
+  <a href="{% url 'edit_ad' advert.id %}"><button class="btn btn-edit"
+    ad_id="{{ ad.id }}">Edit</button></a>
   {% endif %}
 </div>
 </div>

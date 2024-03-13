@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block content %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+<div class="container">
+    <div class="col-md-4 card mb-4 mt-3">
+        <div class="card-body">
+            <h3>Edit Your Advert</h3>
+            <!-- Create a Form -->
+            <form method="POST"  style="margin-top: 1.3em;">
+                <!-- Security token by Django -->
+                {% csrf_token %}
+        
+                <!-- form -->
+                {{ form | crispy }}
+        
+                <input type="submit" value="Update">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
