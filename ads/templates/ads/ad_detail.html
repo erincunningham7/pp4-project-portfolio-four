@@ -32,6 +32,10 @@
   <a href="{% url 'edit_ad' advert.id %}"><button class="btn btn-edit"
     ad_id="{{ ad.id }}">Edit</button></a>
   {% endif %}
+  {% if user.is_authenticated and advert.user == user %}
+  <a href="{% url 'delete_ad' advert.id %}"><button class="btn btn-delete"
+    ad_id="{{ ad.id }}">Delete</button></a>
+  {% endif %}
 </div>
 </div>
 

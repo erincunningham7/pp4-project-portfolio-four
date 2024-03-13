@@ -86,12 +86,26 @@ def edit_ad(request, ad_id):
 
     if form.is_valid():
         form.save()
-        messages.add_message(request, messages.SUCCESS, 'Advert updated!')
+        messages.add_message(request, messages.SUCCESS, 'Advert updated')
         return HttpResponseRedirect(reverse('ad_detail', args=[ad_id]))
     else:
-        messages.add_message(request, messages.ERROR, 'Error updating advert!')
+        messages.add_message(request, messages.ERROR, 'Error updating advert')
 
     context["form"] = form
  
     return render(request, "ads/edit_ad.html", context)
+
+def delete_ad(request, ad_id):
+    context ={}
+    obj = get_object_or_404(Advert, id = ad_id)
+ 
+ 
+    if request.method =="POST":
+        obj.delete()
+        messages.add_message(request, messages.SUCCESS, 'Advert deleted')
+        return HttpResponseRedirect("/")
+    else:
+        messages.add_message(request, messages.ERROR, 'Error deleting advert')
+ 
+    return render(request, "ads/delete_ad.html", context)
 
