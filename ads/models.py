@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from phonenumber_field.modelfields import PhoneNumberField
 from cloudinary.models import CloudinaryField
+from django_resized import ResizedImageField
 
 # Create your models here.
 
@@ -9,7 +10,7 @@ class Advert(models.Model):
     title = models.CharField(max_length=254, unique=True)
     excerpt = models.TextField(blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    featured_image = CloudinaryField('image', default='placeholder')
+    image = ResizedImageField(size=[300, 300], quality=75, upload_to="profiles/", force_format='WEBP', blank=True)
     pet_name = models.CharField(max_length=254, null=False, blank=False)
     pet_breed = models.CharField(max_length=254, null=False, blank=False)
     pet_age = models.IntegerField()
