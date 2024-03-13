@@ -49,7 +49,8 @@ def create_ad(request):
         messages.add_message(
         request, messages.SUCCESS,
         'Your advert is now live!'
-    )
+        )
+        return HttpResponseRedirect("/")
 
     return render(
         request,
