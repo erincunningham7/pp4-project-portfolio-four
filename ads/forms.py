@@ -5,4 +5,4 @@ from django import forms
 class AdvertForm(forms.ModelForm):
     class Meta:
         model = Advert
-        fields = ('title', 'excerpt', 'pet_name', 'pet_breed', 'pet_age', 'vaccinated', 'description', 'phone',)
+        fields = ('title', 'featured_image', 'excerpt', 'pet_name', 'pet_breed', 'pet_age', 'vaccinated', 'description', 'phone',)
