@@ -15,15 +15,13 @@ body {
     color: #ffffff;
 }
 
-.brand:hover {
-    color: #DDB892;
-}
-
 .navbar-text, .nav-link {
     color: #ffffff;
 }
 
-.nav-link:hover {
+.brand:hover,
+.nav-link:hover
+{
     color: #DDB892;
 }
 
