@@ -3,6 +3,24 @@
 Adopt Me is a fictional advertisement website for dog adoption purposes. The app is designed to allow registered to easily make advertisements and manage them.
 The live link can be found here: [Live Site - Adopt Me](https://pp4-adopt-me-7acd5b9ef50f.herokuapp.com/)
 
+# User-Experience-Design
+
+## The-Strategy-Plane
+
+### Site-Goals
+
+The site goal is for registered website users to upload adverts of dogs they would like to put up for adoptio. Advert owners can publish, edit and delete their advert with ease.
+
+The site also aims to provide regular site users with the ability to browse freely through the uploaded adverts.
+
+### Agile Planning
+
+This project was developed using agile methodologies by using the MoSCoW prioritization with the aim of improving quality in rapid app development (RAD) processes.
+
+All projects were assigned to epics, prioritized under Must have, Should Have, Could Have and Won't Have labels.
+
+The Kanban board was created using github projects and can be located [here](https://github.com/erincunningham7/pp4-project-portfolio-four/projects?query=is%3Aopen) and can be viewed to see more information on individual project cards.
+
 ## Deployment
 
 ### Version Control
