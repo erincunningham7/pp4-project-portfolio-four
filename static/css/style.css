@@ -12,7 +12,7 @@ body {
 
 .brand {
     font-size: 1.4rem;
-    color: #EDE0D4;
+    color: #ffffff;
 }
 
 .brand:hover {
@@ -20,7 +20,7 @@ body {
 }
 
 .navbar-text, .nav-link {
-    color: #EDE0D4;
+    color: #ffffff;
 }
 
 .nav-link:hover {
