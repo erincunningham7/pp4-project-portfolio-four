@@ -3,7 +3,9 @@
 
 <div class="ad-container">
     <div class="ad-img">
+        {% if advert.image %}
     <img src="{{ advert.image.url }}" class="col-md-6 float-md-end mb-3 ms-md-3" alt="...">
+    {% endif %}
     </div>
     <div class="ad-content">
     <h1 class="post-title">{{ advert.title }}</h1>
