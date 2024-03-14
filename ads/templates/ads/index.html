@@ -19,13 +19,7 @@
                                 <h2 class="card-title">{{ ad.title }}</h2>
                             </a>
                             <div class="image-container">
-                                {% if "placeholder" in advert.image.url %}
-                                <img class="card-img-top" src="#"
-                                  alt="placeholder image">
-                                {% else %}
-                                <img class="card-img-top" src="#"
-                                  alt="{{ ad.title }}">
-                                {% endif %}
+                                <img class="card-img-top" src="{{ ad.image.url }}">
                             <p class="card-text text-muted h6">{{ ad.created_on}}
                             </p>
                             <p class="card-text">{{ ad.excerpt }}
