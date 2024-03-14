@@ -60,27 +60,11 @@ def create_ad(request):
         },
     )
 
-# def edit_ad(request, ad_id):
-#     """
-#     view to edit an ad
-#     """
-#     if request.method == "POST":
-
-#         queryset = Advert.objects.get(pk=ad_id)
-#         advert = get_object_or_404(queryset, ad_id=ad_id)
-#         advert_form = AdvertForm(data=request.POST, instance=advert)
-
-#         if advert_form.is_valid() and advert.user == request.user:
-#             ad = advert_form.save(commit=False)
-#             ad.advert = advert
-#             ad.save()
-#             messages.add_message(request, messages.SUCCESS, 'Advert updated!')
-#         else:
-#             messages.add_message(request, messages.ERROR, 'Error updating advert!')
-
-#     return HttpResponseRedirect(reverse('ad_detail', args=[ad_id]))
 
 def edit_ad(request, ad_id):
+    """
+    View to edit an ad
+    """
     context = {}
     obj = get_object_or_404(Advert, id=ad_id)
     form = AdvertForm(request.POST or None, instance = obj)
@@ -97,6 +81,9 @@ def edit_ad(request, ad_id):
     return render(request, "ads/edit_ad.html", context)
 
 def delete_ad(request, ad_id):
+    """
+    View to delete and ad
+    """
     context ={}
     obj = get_object_or_404(Advert, id = ad_id)
  
