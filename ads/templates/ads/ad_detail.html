@@ -13,22 +13,22 @@
     <p class="post-subtitle">{{ advert.user }} | {{ advert.created_on }}</p>
     
     <p class="card-text">Pet Name:
-        {{ advert.pet_name | safe }}
+        {{ advert.pet_name }}
     </p>
     <p class="card-text">Pet Breed:
-        {{ advert.pet_breed | safe }}
+        {{ advert.pet_breed }}
     </p>
     <p class="card-text">Age:
-        {{ advert.pet_age | safe }}
+        {{ advert.pet_age }}
     </p>
     <p class="card-text">Vaccinated:
-        {{ advert.vaccinated | safe }}
+        {{ advert.vaccinated }}
     </p>
     <p class="card-text">Details:
-        {{ advert.description | safe }}
+        {{ advert.description }}
     </p>
     <p class="card-text">Contact Number:
-        {{ advert.phone | safe }}
+        {{ advert.phone }}
     </p>
     {% if user.is_authenticated and advert.user == user %}
   <a href="{% url 'edit_ad' advert.id %}"><button class="btn btn-edit"
