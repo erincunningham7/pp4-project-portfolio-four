@@ -69,15 +69,24 @@ def edit_ad(request, ad_id):
     obj = get_object_or_404(Advert, id=ad_id)
     form = AdvertForm(request.POST or None, instance = obj)
 
-    if form.is_valid():
-        form.save()
-        messages.add_message(request, messages.SUCCESS, 'Advert updated')
-        return HttpResponseRedirect(reverse('ad_detail', args=[ad_id]))
-    else:
-        messages.add_message(request, messages.ERROR, 'Error updating advert')
+    if not obj.user == request.user:
+        messages.error(
+            request,
+            'Error, you are unauthorized to edit this ad'
+        )
+        return redirect(reverse('home'))
+    form =  AdvertForm(request.POST or None, instance = obj)
+
+    if request.method == "POST":
+        if form.is_valid():
+            form.save()
+            messages.add_message(request, messages.SUCCESS, 'Advert updated')
+            return HttpResponseRedirect(reverse('ad_detail', args=[ad_id]))
+        else:
+            messages.add_message(request, messages.ERROR, 'Error updating advert')
 
     context["form"] = form
- 
+
     return render(request, "ads/edit_ad.html", context)
 
 def delete_ad(request, ad_id):
@@ -87,6 +96,12 @@ def delete_ad(request, ad_id):
     context ={}
     obj = get_object_or_404(Advert, id = ad_id)
  
+    if not obj.user == request.user:
+        messages.error(
+            request,
+            'Error, you are unauthorized to delete this ad'
+        )
+        return redirect(reverse('home'))
  
     if request.method =="POST":
         obj.delete()
