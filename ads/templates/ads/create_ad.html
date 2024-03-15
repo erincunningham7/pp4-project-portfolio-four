@@ -8,8 +8,8 @@
           {% if user.is_authenticated %}
           <h3>Create An Advert</h3>
           <p>Posting as: {{ user.username }}</p>
-          <form id="commentForm" method="post"
-            style="margin-top: 1.3em;">
+          <form id="advertForm" method="post"
+            style="margin-top: 1.3em;" enctype="multipart/form-data">
             {{ advert_form | crispy }}
             {% csrf_token %}
             <button id="submitButton" type="submit"
