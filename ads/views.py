@@ -59,7 +59,7 @@ def create_ad(request):
     advert_form = AdvertForm()
 
     if request.method == "POST":
-        advert_form = AdvertForm(data=request.POST)
+        advert_form = AdvertForm(request.POST, request.FILES)
     if advert_form.is_valid():
         ad = advert_form.save(commit=False)
         ad.user = request.user
@@ -86,7 +86,7 @@ def edit_ad(request, ad_id):
     """
     context = {}
     obj = get_object_or_404(Advert, id=ad_id)
-    form = AdvertForm(request.POST or None, instance = obj)
+    form = AdvertForm(request.POST and request.FILES or None, instance = obj)
 
     if not obj.user == request.user:
         messages.error(
