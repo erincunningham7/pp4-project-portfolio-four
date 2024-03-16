@@ -21,6 +21,70 @@ All projects were assigned to epics, prioritized under Must have, Should Have, C
 
 The Kanban board was created using github projects and can be located [here](https://github.com/erincunningham7/pp4-project-portfolio-four/projects?query=is%3Aopen) and can be viewed to see more information on individual project cards.
 
+### Epics
+
+The project has three main epics (milestones):
+
+1. Developer set up
+The developer setup milestone involves anything to do with setting up the development environment.
+
+2. Adoption
+The adoption milestone involves anything that relates to the CRUD for advertising animals.
+
+3. Authentication
+The authentication milestone involves anything associated with checking a user's identity.
+
+### User Stories
+
+The following outlines the user stories (by epic):
+
+1. Developer set up
+- As a developer I can create the base.html template so that other html pages can reuse the layout
+- As a developer I can add statis resources so that the css, javascript and images work effectively on the platform
+- As a developer I can add a 404 error page so that site users are alerted when they have accessed a page that does not exist
+
+2. Adoption
+- As a site user I can view a list of adverts so that so that I can browse through them
+- As a site visitor I can view the advertisements so that browse through the adoption ads
+- As a site user I can create an advertisement so that I can upload the animals information to potential new adopters
+- As a site user I can edit or delete an advert so that I can change or remove my submitted ad content
+- As a site user I can view the about page so that I can read what the website is about
+
+3. Authentication
+- As a site visitor I can register for an account so that I can log in and out of the website
+- As a admin I can login to the admin panel so that I can manage the website
+
+## The Scope Plane
+
+- Responsive Design: website should be fully functional on all devices from 320px up
+- Hamburger menu for mobile devices
+- Ability to perform CRUD functionality on adverts
+- Restricted role based features
+- About page with website information#
+
+## The Structure Plane
+
+### Features
+
+**Navigation Menu**
+
+**Home Page**
+
+**Footer**
+
+**Create Advert page**
+
+**Edit Advert Page**
+
+**Delete Advert Page**
+
+**Toasts**
+
+**404 Page**
+
+
+
+
 ## Deployment
 
 ### Version Control
