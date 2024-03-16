@@ -8,6 +8,9 @@ from django_resized import ResizedImageField
 
 
 class Advert(models.Model):
+    """
+    A model for the essential advert data fields
+    """
     title = models.CharField(max_length=254, unique=True)
     excerpt = models.TextField(blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
