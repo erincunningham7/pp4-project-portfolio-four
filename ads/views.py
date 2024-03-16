@@ -5,10 +5,29 @@ from django.contrib import messages
 from .models import Advert
 from .forms import AdvertForm
 
+def about_view(request):
+    """
+    A view to render the about page
+    """
+    return render(request, 'ads/about.html')
+
 class AdList(generic.ListView):
     queryset = Advert.objects.all()
     template_name = "ads/index.html"
     paginate_by = 6
+
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     if not self.request.user.is_authenticated:
+    #         return redirect('about')
+
+    #     return context
+
+    def get(self, request, *args, **kwargs):
+        if not self.request.user.is_authenticated:
+            return redirect('about')
+        return super().get(request, *args, **kwargs)
+
 
 def ad_detail(request, ad_id):
     """
@@ -112,9 +131,3 @@ def delete_ad(request, ad_id):
  
     return render(request, "ads/delete_ad.html", context)
 
-
-def about_view(request):
-    """
-    A view to render the about page
-    """
-    return render(request, 'ads/about.html')
