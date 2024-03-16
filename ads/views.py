@@ -89,7 +89,7 @@ def edit_ad(request, ad_id):
     """
     context = {}
     obj = get_object_or_404(Advert, id=ad_id)
-    form = AdvertForm(request.POST and request.FILES or None, instance=obj)
+    form = AdvertForm(request.POST, request.FILES or None, instance=obj)
 
     if not obj.user == request.user:
         messages.error(
@@ -97,9 +97,10 @@ def edit_ad(request, ad_id):
             'Error, you are unauthorized to edit this ad'
         )
         return redirect(reverse('home'))
-    form = AdvertForm(request.POST or None, instance=obj)
+    # form = AdvertForm(request.POST and request.FILES or None, instance=obj)
 
     if request.method == "POST":
+        form = AdvertForm(request.POST, request.FILES, instance=obj)
         if form.is_valid():
             form.save()
             messages.add_message(request, messages.SUCCESS, 'Advert updated')
@@ -110,6 +111,8 @@ def edit_ad(request, ad_id):
                                 messages.ERROR,
                                 'Error updating advert'
                                 )
+    else:
+        form = AdvertForm(instance=obj)
 
     context["form"] = form
 
