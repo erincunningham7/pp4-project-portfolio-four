@@ -159,6 +159,12 @@ In the future I would like to implement a contact form for users to contact the 
 
 ![Ad detail page wireframe](static/images/IMG_8625.jpg)
 
+### Database-Design
+
+The database was designed with user CRUD functionality in mind for registered users, when signed in. The user model is the backbone of the application as it is connected the the main advert model, linked by a primary/foreign key relationship.
+
+
+![Entity Relationship Diagram](static/images/adopt-me-erd.png)
 
 ## Deployment
 
