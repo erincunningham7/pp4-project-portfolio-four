@@ -11,7 +11,7 @@ The live link can be found here: [Live Site - Adopt Me](https://pp4-adopt-me-7ac
 
 ### Site-Goals
 
-The site goal is for registered website users to upload adverts of dogs they would like to put up for adoptio. Advert owners can publish, edit and delete their advert with ease.
+The site goal is for registered website users to upload adverts of dogs they would like to put up for adoption. Advert owners can publish, edit and delete their advert with ease.
 
 The site also aims to provide regular site users with the ability to browse freely through the uploaded adverts.
 
@@ -215,7 +215,7 @@ All images were taken from [a free image site](https://www.pexels.com/).
 
 - The Code Institute I Think Therefore I Blog Walkthrough was used as a basic outline for the website
 - [DBeaver was used to make the ERD](https://dbeaver.com/2022/06/30/two-ways-to-use-erd-in-dbeaver/)
-- [This tutorial helped in figuring out hoe to upload images successfully](https://djangocentral.com/uploading-images-with-django/)
+- [This tutorial helped in figuring out how to upload images successfully](https://djangocentral.com/uploading-images-with-django/)
 
 ## Testing
 
@@ -224,8 +224,8 @@ All images were taken from [a free image site](https://www.pexels.com/).
 |Navbar|Click on Title in Navabr|Redirect to Home |Pass| |
 ||Click on the links in Navbar|Redirect to correct page |Pass|Navbar present on all pages | |
 |Ad detail page| Click on the advert link. Ensure it redirects to the correct single advert detail page |When clicked each card redirects to the correct single advert page |Pass| |
-|| Click on the edit advert button. Ensure it redirects to the edit advert page |When clicked the edit button redirects to the edit advert page|Pass| |
-|| Click on the delete advert button. Ensure it redirects to the delete advert page |When clicked the delete button redirects to the edit advert page|Pass| |
+|Edit advert page| Click on the edit advert button. Ensure it redirects to the edit advert page |When clicked the edit button redirects to the edit advert page|Pass| |
+|Delete advert page| Click on the delete advert button. Ensure it redirects to the delete advert page |When clicked the delete button redirects to the edit advert page|Pass| |
 |Footer|Click on all of the social links in the footer. Ensure each external link opens the correct page in a new tab |All external links open the correct page in a new tab |Pass| |
 
 * HTML Validation
