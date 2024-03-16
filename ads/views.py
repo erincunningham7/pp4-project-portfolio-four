@@ -112,3 +112,9 @@ def delete_ad(request, ad_id):
  
     return render(request, "ads/delete_ad.html", context)
 
+
+def about_view(request):
+    """
+    A view to render the about page
+    """
+    return render(request, 'ads/about.html')

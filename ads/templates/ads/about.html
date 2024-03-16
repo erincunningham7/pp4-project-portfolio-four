@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+{% load static %}
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-8 card mb-4  mt-3 left  top">
+        <div class="card-body">
+            <h1>About Us</h1>
+            <p class="card-text">Find your perfect match from our selection of dogs looking for a forever home at Adopt Me.</p>
+            <p class="card-text">The love of an adopted dog is priceless. Adopt a dog and find a friend for life. A rescued dog brings joy, love, and endless adventure. Adopting a dog means choosing love over pedigree. Every dog has its day, and for rescues, it's the adoption day! The more people I meet, the more I love my rescue dog. Unleash the love, adopt today.</p>
+            <p class="card-text"> Feel free to <a href="{% url 'account_login' %}">Login</a> or <a href="{% url 'account_signup' %}">Sign Up today</a> to upload your own advertizement.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
