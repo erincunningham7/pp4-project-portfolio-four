@@ -18,12 +18,6 @@ class AdList(generic.ListView):
     template_name = "ads/index.html"
     paginate_by = 6
 
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     if not self.request.user.is_authenticated:
-    #         return redirect('about')
-
-    #     return context
 
     def get(self, request, *args, **kwargs):
         if not self.request.user.is_authenticated:
@@ -97,7 +91,6 @@ def edit_ad(request, ad_id):
             'Error, you are unauthorized to edit this ad'
         )
         return redirect(reverse('home'))
-    # form = AdvertForm(request.POST and request.FILES or None, instance=obj)
 
     if request.method == "POST":
         form = AdvertForm(request.POST, request.FILES, instance=obj)
