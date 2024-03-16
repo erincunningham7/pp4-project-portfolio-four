@@ -31,10 +31,10 @@
         {{ advert.phone }}
     </p>
     {% if user.is_authenticated and advert.user == user %}
-  <a href="{% url 'edit_ad' advert.id %}" class="button">Edit</a>
+  <a href="{% url 'edit_ad' advert.id %}" class="btn btn-edit text-dark">Edit</a>
   {% endif %}
   {% if user.is_authenticated and advert.user == user %}
-  <a href="{% url 'delete_ad' advert.id %}" class="button">Delete</a>
+  <a href="{% url 'delete_ad' advert.id %}" class="btn btn-delete text-dark">Delete</a>
   {% endif %}
 </div>
 </div>
