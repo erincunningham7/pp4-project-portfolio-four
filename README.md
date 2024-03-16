@@ -21,6 +21,8 @@ All projects were assigned to epics, prioritized under Must have, Should Have, C
 
 The Kanban board was created using github projects and can be located [here](https://github.com/erincunningham7/pp4-project-portfolio-four/projects?query=is%3Aopen) and can be viewed to see more information on individual project cards.
 
+![Kanban image](static/images/adopt-me-kanban-board.png)
+
 ### Epics
 
 The project has three main epics (milestones):
