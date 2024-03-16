@@ -172,6 +172,51 @@ Environment variables were kept in the env.py for security reasons, mainly to ma
 
 Views were secured by adding if statement to ensure if users are not ad owners they are not capable of editing or deleting an advert.
 
+## The-Surface-Plane
+### Design
+
+### Colour-Scheme
+
+I used a [color palette](https://coolors.co/palettes/trending) I found online to create a color scheme on the website. According to color psychology, brown invokes feelings of loneliness, sadness, and isolation. I wanted to invoke these feelings in website visitors in the hopes they would be more inclined to adopt a dog. I also thimk brown represents nature.
+
+![Color palette](static/images/adopt-me-color-palette.png)
+
+### Typography
+
+The "Cormorant Garamond" font was used throughout the website. This font is from google fonts.
+
+### Imagery
+
+All images were taken from [a free image site](https://www.pexels.com/).
+
+## Technolgies
+
+### Languages Used
+
+- HTML
+- CSS
+- Javascript
+- Python
+- Django
+- Bootstrap
+
+### Python Modules
+
+- cloudinary==1.36.0 - used for custom image uploads
+- crispy-bootstrap5==0.7 - used for bootstrap forms
+- dj-database-url==0.5.0 - used to parse database url for production environment
+- django-resized==1.0.2 - used for image resizing
+- django-summernote==0.8.20.0 - used for WYSIWYG editing
+- gunicorn==20.1.0 - installed as dependency with another package
+- pillow==10.2.0 - used for image upload purposes
+- whitenoise==5.3.0 - Used to serve static files
+
+### Technologies & Programs
+
+- The Code Institute I Think Therefore I Blog Walkthrough was used as a basic outline for the website
+- [DBeaver was used to make the ERD](https://dbeaver.com/2022/06/30/two-ways-to-use-erd-in-dbeaver/)
+- [This tutorial helped in figuring out hoe to upload images successfully](https://djangocentral.com/uploading-images-with-django/)
+
 ## Deployment
 
 ### Version Control
