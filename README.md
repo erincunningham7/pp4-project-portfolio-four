@@ -217,6 +217,35 @@ All images were taken from [a free image site](https://www.pexels.com/).
 - [DBeaver was used to make the ERD](https://dbeaver.com/2022/06/30/two-ways-to-use-erd-in-dbeaver/)
 - [This tutorial helped in figuring out hoe to upload images successfully](https://djangocentral.com/uploading-images-with-django/)
 
+## Testing
+
+|Section|Test Action|Expected Result|Pass/Fail|Comments|
+| ---| ---| ---| ---| ---|
+|Navbar|Click on Title in Navabr|Redirect to Home |Pass| |
+||Click on the links in Navbar|Redirect to correct page |Pass|Navbar present on all pages | |
+|Ad detail page| Click on the advert link. Ensure it redirects to the correct single advert detail page |When clicked each card redirects to the correct single advert page |Pass| |
+|| Click on the edit advert button. Ensure it redirects to the edit advert page |When clicked the edit button redirects to the edit advert page|Pass| |
+|| Click on the delete advert button. Ensure it redirects to the delete advert page |When clicked the delete button redirects to the edit advert page|Pass| |
+|Footer|Click on all of the social links in the footer. Ensure each external link opens the correct page in a new tab |All external links open the correct page in a new tab |Pass| |
+
+* HTML Validation
+
+All Html files passed the validation
+
+![HTML validation](static/images/adopt-me-html-validator.png)
+
+* Python Linter
+
+All python files caused no errors
+
+![Python Linter](static/images/adopt_me_python_linter.png)
+
+* Wave Accessibility
+
+All pages returned no errors
+
+![Wave Accessibility](static/images/adopt-me-wave-accessibility.png)
+
 ## Deployment
 
 ### Version Control
