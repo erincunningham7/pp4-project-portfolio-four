@@ -262,22 +262,58 @@ All images were taken from [a free image site](https://www.pexels.com/).
 |Sign up| Click register, enter username and password | registration succesful |Pass| |
 |Login| Click login, enter username and password | login succesful |Pass| |
 |Footer|Click on all of the social links in the footer. Ensure each external link opens the correct page in a new tab |All external links open the correct page in a new tab |Pass| |
+|Responsiveness|Test pags to ensure responsiveness on all browsers|Website behaves as expected |Pass| |
+
+**Navigation Links**
+
+Testing was performed to ensure all navigation links on the respective pages, navigated to the correct pages as per design. This was done by clicking on the navigation links on each page.
+
+- Home -> index.html
+- About Us -> about.html
+- Create Advert -> create_ad.html
+- Logout -> Sign out all auth page
+- Login -> Sign in all auth page
+- Register -> Sign up all auth page
+
+All navigation links directed to the corect pages as expected.
+
+**Footer**
+
+Testing was performed on the footer links by clicking the font awesome icons and ensuring that the icons opened in their respective tabs. These behaved as expected.
+
+**Negative Testing**
+
+Tests were performed on the create booking to ensure that:
+
+1. A user cannot edit someone elses advert
+2. A user cannot delete someone elses adert
+3. An unregistered user cannot create an advert
+4. Forms cannot be submitted when required fields are empty
 
 * HTML Validation
 
-All Html files passed the validation
+All Html files were tested for validation. Initially there were some errors due to misuse of buttons appearing as decsendents of link elements. These issues were corrected and all pages passed validation.
+
+Due to the django templating language code used in the HTML files, these could not be simply copy and pasted into the validator. To test the validation on the files, I opened the page I wanted to validate, and right clicked and selected view page source. I had to paste the raw html code into the validator as this would display be only the HTML rendered code.
 
 ![HTML validation](static/images/adopt-me-html-validator.png)
 
 * Python Linter
 
-All python files caused no errors
+All python files were passed through the ci python linter. Initially there were a couple of errors were shown due to lines too long, blank spaces, 1 line instead of 2 expected. All of these errors were fixed and in the end the code passed through validators.
+
+In the settings.py file, the django auto generated code for AUTH_PASSWORD_VALIDATORS were showing errors for lines too long. I couldnt find a way to split these lines to resolve the error. This was not my code as they were auto-generated.
 
 ![Python Linter](static/images/adopt_me_python_linter.png)
 
 * Wave Accessibility
 
-All pages returned no errors
+All pages were checked for accessibility errors.
+
+Testing was done to ensure the following criteria were met:
+
+- No errors are present
+- No color contrasts errors are present
 
 ![Wave Accessibility](static/images/adopt-me-wave-accessibility.png)
 
