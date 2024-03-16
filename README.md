@@ -254,11 +254,14 @@ All images were taken from [a free image site](https://www.pexels.com/).
 
 |Section|Test Action|Expected Result|Pass/Fail|Comments|
 | ---| ---| ---| ---| ---|
-|Navbar|Click on Title in Navabr|Redirect to Home |Pass| |
+|Navbar|Click on Title in Navbar|Redirect to Home |Pass| |
 ||Click on the links in Navbar|Redirect to correct page |Pass|Navbar present on all pages | |
 |Ad detail page| Click on the advert link. Ensure it redirects to the correct single advert detail page |When clicked each card redirects to the correct single advert page |Pass| |
 |Edit advert page| Click on the edit advert button. Ensure it redirects to the edit advert page |When clicked the edit button redirects to the edit advert page|Pass| |
 |Delete advert page| Click on the delete advert button. Ensure it redirects to the delete advert page |When clicked the delete button redirects to the edit advert page|Pass| |
+|Sign up| Click register, enter username and password | registration succesful |Pass| |
+|Login| Click login, enter username and password | login succesful |Pass| |
+|Logout Click logout, click sign out button | sign out succesful |Pass| |
 |Footer|Click on all of the social links in the footer. Ensure each external link opens the correct page in a new tab |All external links open the correct page in a new tab |Pass| |
 
 * HTML Validation
