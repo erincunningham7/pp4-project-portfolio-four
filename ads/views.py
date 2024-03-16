@@ -5,11 +5,13 @@ from django.contrib import messages
 from .models import Advert
 from .forms import AdvertForm
 
+
 def about_view(request):
     """
     A view to render the about page
     """
     return render(request, 'ads/about.html')
+
 
 class AdList(generic.ListView):
     queryset = Advert.objects.all()
@@ -51,6 +53,7 @@ def ad_detail(request, ad_id):
         "advert": advert,
         })
 
+
 def create_ad(request):
     """
     view to create an ad
@@ -66,9 +69,9 @@ def create_ad(request):
         ad.advert = advert
         ad.save()
         messages.add_message(
-        request, messages.SUCCESS,
-        'Your advert is now live!'
-        )
+                            request, messages.SUCCESS,
+                            'Your advert is now live!'
+                            )
         return HttpResponseRedirect("/")
 
     return render(
@@ -86,7 +89,7 @@ def edit_ad(request, ad_id):
     """
     context = {}
     obj = get_object_or_404(Advert, id=ad_id)
-    form = AdvertForm(request.POST and request.FILES or None, instance = obj)
+    form = AdvertForm(request.POST and request.FILES or None, instance=obj)
 
     if not obj.user == request.user:
         messages.error(
@@ -94,7 +97,7 @@ def edit_ad(request, ad_id):
             'Error, you are unauthorized to edit this ad'
         )
         return redirect(reverse('home'))
-    form =  AdvertForm(request.POST or None, instance = obj)
+    form = AdvertForm(request.POST or None, instance=obj)
 
     if request.method == "POST":
         if form.is_valid():
@@ -102,32 +105,36 @@ def edit_ad(request, ad_id):
             messages.add_message(request, messages.SUCCESS, 'Advert updated')
             return HttpResponseRedirect(reverse('ad_detail', args=[ad_id]))
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating advert')
+            messages.add_message(
+                                request,
+                                messages.ERROR,
+                                'Error updating advert'
+                                )
 
     context["form"] = form
 
     return render(request, "ads/edit_ad.html", context)
 
+
 def delete_ad(request, ad_id):
     """
     View to delete and ad
     """
-    context ={}
-    obj = get_object_or_404(Advert, id = ad_id)
- 
+    context = {}
+    obj = get_object_or_404(Advert, id=ad_id)
+
     if not obj.user == request.user:
         messages.error(
             request,
             'Error, you are unauthorized to delete this ad'
         )
         return redirect(reverse('home'))
- 
-    if request.method =="POST":
+
+    if request.method == "POST":
         obj.delete()
         messages.add_message(request, messages.SUCCESS, 'Advert deleted')
         return HttpResponseRedirect("/")
     else:
         messages.add_message(request, messages.ERROR, 'Error deleting advert')
- 
-    return render(request, "ads/delete_ad.html", context)
 
+    return render(request, "ads/delete_ad.html", context)
