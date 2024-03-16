@@ -166,6 +166,12 @@ The database was designed with user CRUD functionality in mind for registered us
 
 ![Entity Relationship Diagram](static/images/adopt-me-erd.png)
 
+### Security
+
+Environment variables were kept in the env.py for security reasons, mainly to make sure that no sensitive information was added the the public repository. In production, these variables were added to the heroku config vars.
+
+Views were secured by adding if statement to ensure if users are not ad owners they are not capable of editing or deleting an advert.
+
 ## Deployment
 
 ### Version Control
