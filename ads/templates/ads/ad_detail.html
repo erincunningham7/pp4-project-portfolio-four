@@ -4,7 +4,7 @@
 <div class="ad-container">
     <div class="ad-img">
         {% if advert.image %}
-    <img src="{{ advert.image.url }}" class="col-md-6 float-md-end mb-3 ms-md-3" alt="...">
+    <img src="{{ advert.image.url }}" class="col-md-6 float-md-end mb-3 ms-md-3" alt="advert image of dog">
     {% endif %}
     </div>
     <div class="ad-content">
@@ -31,12 +31,10 @@
         {{ advert.phone }}
     </p>
     {% if user.is_authenticated and advert.user == user %}
-  <a href="{% url 'edit_ad' advert.id %}"><button class="btn btn-edit"
-    ad_id="{{ ad.id }}">Edit</button></a>
+  <a href="{% url 'edit_ad' advert.id %}" class="button">Edit</a>
   {% endif %}
   {% if user.is_authenticated and advert.user == user %}
-  <a href="{% url 'delete_ad' advert.id %}"><button class="btn btn-delete"
-    ad_id="{{ ad.id }}">Delete</button></a>
+  <a href="{% url 'delete_ad' advert.id %}" class="button">Delete</a>
   {% endif %}
 </div>
 </div>
