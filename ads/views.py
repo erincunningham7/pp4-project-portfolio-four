@@ -129,7 +129,5 @@ def delete_ad(request, ad_id):
         obj.delete()
         messages.add_message(request, messages.SUCCESS, 'Advert deleted')
         return HttpResponseRedirect("/")
-    else:
-        messages.add_message(request, messages.ERROR, 'Error deleting advert')
 
     return render(request, "ads/delete_ad.html", context)
