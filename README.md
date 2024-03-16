@@ -263,6 +263,8 @@ All images were taken from [a free image site](https://www.pexels.com/).
 |Login| Click login, enter username and password | login succesful |Pass| |
 |Footer|Click on all of the social links in the footer. Ensure each external link opens the correct page in a new tab |All external links open the correct page in a new tab |Pass| |
 |Responsiveness|Test pags to ensure responsiveness on all browsers|Website behaves as expected |Pass| |
+|Messages|Click on sign out|Message appears and timer works |Pass| |
+|Personalized message|Click on login, enter username and password|Personalized message appears |Pass| |
 
 **Navigation Links**
 
