@@ -18,7 +18,6 @@ class AdList(generic.ListView):
     template_name = "ads/index.html"
     paginate_by = 6
 
-
     def get(self, request, *args, **kwargs):
         if not self.request.user.is_authenticated:
             return redirect('about')
