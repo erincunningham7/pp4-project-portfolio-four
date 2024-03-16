@@ -151,7 +151,13 @@ In the future I would like to implement a contact form for users to contact the 
 
 ### Wireframes
 
+- Home page
 
+![Home page wireframe](static/images/IMG_8626.jpg)
+
+- Ad detail page
+
+![Ad detail page wireframe](static/images/IMG_8625.jpg)
 
 
 ## Deployment
